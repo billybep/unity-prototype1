@@ -5,24 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Private variables
-    private float speed = 20.0f;
-    private float turnSpeed = 25.0f;
-    private float horizontalInput;
-    private float verticalInput;
+    [SerializeField] private float speed = 20.0f;
+    [SerializeField] private float turnSpeed = 25.0f;
+    [SerializeField] private float horizontalInput;
+    [SerializeField] private float verticalInput;
 
     // Public variables
     public Camera mainCamera;
     public Camera hoodCamera;
     public KeyCode switchKey;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    // FixedUpdate ==> Call before update call
+    // Special usefull try to to movement or physic
+    void FixedUpdate() 
     {
         // Player input
         horizontalInput = Input.GetAxis("Horizontal");
