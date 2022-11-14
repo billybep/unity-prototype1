@@ -6239,7 +6239,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedometerText: {fileID: 1921311807}
   rpmText: {fileID: 491599945}
-  allWheels: []
+  allWheels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speed: 0
   horsePower: 20000
   turnSpeed: 25
